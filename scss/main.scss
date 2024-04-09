@@ -84,7 +84,7 @@ p {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 5px;
+    padding: 8px;
     display: flex;
     justify-content: space-between;
     opacity: 0;
@@ -94,4 +94,12 @@ p {
 
 .form-label {
   color: $primary;
+}
+
+.allreservations {
+  a {
+    display: block;
+    color: $black;
+    padding: 10px;
+  }
 }
