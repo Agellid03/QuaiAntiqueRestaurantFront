@@ -4,6 +4,7 @@ const btnsignIn = document.getElementById("btnSignIn");
 const signInForm = document.getElementById("formulaireConnexion");
 
 btnsignIn.addEventListener("click", checkCredentials);
+
 function checkCredentials() {
   // Crée un nouvel objet FormData à partir du formulaire contenu dans la variable "formInscription"
   let dataForm = new FormData(signInForm);
