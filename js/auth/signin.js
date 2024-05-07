@@ -5,6 +5,18 @@ const signInForm = document.getElementById("formulaireConnexion");
 
 btnsignIn.addEventListener("click", checkCredentials);
 
+function sanitizeHtml(text) {
+  // Créez un élément HTML temporaire de type "div"
+  const tempHtml = document.createElement("div");
+
+  // Affectez le texte reçu en tant que contenu texte de l'élément "tempHtml"
+  tempHtml.textContent = text;
+
+  // Utilisez .innerHTML pour récupérer le contenu de "tempHtml"
+  // Cela va "neutraliser" ou "échapper" tout code HTML potentiellement malveillant
+  return tempHtml.innerHTML;
+}
+
 function checkCredentials() {
   // Crée un nouvel objet FormData à partir du formulaire contenu dans la variable "formInscription"
   let dataForm = new FormData(signInForm);
